@@ -6,9 +6,51 @@
         <meta name="keywords" content="StartupStorm,UBC,tech"> <!-- TODO: change viewport meta tag after mobile implementation -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>StartupStorm</title>
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-      
+
+      <div class="navbar" id="main-navbar">
+        <img class="logo" src="img/nav_logo.svg"/>
+        <div class="align-items-right" id="link-container">
+        <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
+        <a href="#home" class="selected">Home</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact Us</a>
+        <img class="social-icon first" src="img/facebook_icon.svg"/>
+        <img class="social-icon" src="img/twitter_icon.svg"/>
+        <img class="social-icon last" src="img/ig_icon.svg"/>
+        </div>
+        <a href="javascript:void(0);" class="hamburger-menu" onclick="myFunction()"><img src="img/hamburger_menu.png"/></a>
+
+      <!-- </div> -->
+      </div>
+
+
+      <script>
+      function myFunction() {
+          var nav = document.getElementById("main-navbar");
+          var links = document.getElementById("link-container");
+          if (nav.className === "navbar") {
+              nav.className += " responsive";
+              nav.className
+          } else {
+              nav.className = "navbar";
+          }
+          if (links.className.includes("align-center")){
+            links.className = "align-items-right"
+          } else {
+            links.className += " align-center";
+          }
+      }
+
+      </script>
+
+      <div id="panel1">
+        <section id="container">
+      <img src="img/header_logo.svg" id="logo"/>
+      <div id="content">StartupStorm is a club for aspiring entrepreneurs, programmers, and designers at UBC. </div>
+    </section>
+    </div>
     </body>
 </html>
